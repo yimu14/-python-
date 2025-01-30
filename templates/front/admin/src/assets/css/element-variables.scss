@@ -1,0 +1,23 @@
+/* 改变主题色变量 */
+$--color-primary: #1890ff;
+$--color-success: #52c41a;
+$--color-warning: #faad14;
+$--color-danger: #f5222d;
+$--color-info: #909399;
+
+/* 添加自定义颜色变量 */
+$--background-color-base: #f0f2f5 !default;
+$--menu-dark-bg: #001529 !default;
+$--header-dark-bg: #002140 !default;
+
+/* 改变字体变量 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+/* 改变组件的基础样式 */
+$--border-radius-base: 4px;
+$--border-color-base: #dcdfe6;
+$--border-color-light: #e4e7ed;
+$--border-color-lighter: #ebeef5;
+$--box-shadow-base: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+
+@import "~element-ui/packages/theme-chalk/src/index";

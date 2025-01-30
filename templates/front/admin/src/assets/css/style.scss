@@ -1,0 +1,127 @@
+// 全局变量
+$background-color: #f0f2f5;
+$card-background: #ffffff;
+$primary-color: #1890ff;
+$text-color: #333333;
+$border-radius: 4px;
+
+// 内容区域通用样式
+.form-content {
+  background: $card-background;
+  padding: 24px;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.table-content {
+  background: $card-background;
+  padding: 24px;
+  border-radius: $border-radius;
+  margin-top: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.pagination-content {
+  margin-top: 16px;
+  padding: 16px 0;
+  text-align: right;
+  
+  .el-pagination {
+    padding: 0;
+    
+    .btn-prev, .btn-next {
+      background-color: $card-background;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    
+    .el-pager li {
+      &.active {
+        background-color: $primary-color;
+        color: #fff;
+      }
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.detail-form-content {
+  background: $card-background;
+  padding: 24px;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  
+  .el-input {
+    min-width: 200px;
+    max-width: 600px;
+    
+    &:focus-within {
+      .el-input__inner {
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+// 登录页面样式
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 400px;
+  background: $card-background;
+  padding: 40px;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  .h1 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-color;
+    text-align: center;
+  }
+  
+  .btn-login {
+    margin-top: 24px;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+      border-color: lighten($primary-color, 10%);
+    }
+  }
+}
+
+// 响应式调整
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    padding: 20px;
+  }
+  
+  .form-content,
+  .table-content,
+  .detail-form-content {
+    padding: 16px;
+  }
+}
